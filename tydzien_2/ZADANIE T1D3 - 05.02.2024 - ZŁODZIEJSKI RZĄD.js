@@ -45,10 +45,19 @@ function zakupy(balansPortfela, towary) {
 
     console.log("balans portfela: " + balansPortfela);
     towary.sort((a, b) => b.koszt - a.koszt);
+
+    //kilka sposobów na zobaczenie zawartości obiektu
+    //1
+    console.log("1 SPOSÓB: ")
     for(let i of towary){
         console.log(i);
     }
+    //2
+    console.log("2 SPOSÓB: ")
     console.log(JSON.stringify(towary))
+    //3
+    console.log("3 SPOSÓB: ")  
+    console.table(towary)
 
     for(const towar of towary){
         for(let i = 0; i < towar.liczbaSztuk; i++){
